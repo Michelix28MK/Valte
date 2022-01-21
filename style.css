@@ -1,9 +1,9 @@
 body{
     display: grid;
     grid: [stack] 1fr/ [stack] 1fr;
-    background-color: rgb(65, 65, 65);
+    /*background-color: rgb(65, 65, 65);*/
+    background-color: white;
 }
-
 nav,main{
     grid-area: stack;
 }
@@ -14,11 +14,16 @@ nav{
     transition: transform 500ms,
         visibility 0ms linear 500ms;
 }
+li{
+    margin: 6px;
+}
 nav:target{
     visibility: visible;
     transform: translateX(0);
     transition:  transform 500ms;
 }
-.content{
-    padding: 5px;
+.titolo{
+    display: grid;
+    grid-template-columns: auto 30px;
+    align-items: baseline;
 }
