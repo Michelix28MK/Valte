@@ -1,0 +1,24 @@
+body{
+    display: grid;
+    grid: [stack] 1fr/ [stack] 1fr;
+    background-color: rgb(65, 65, 65);
+}
+
+nav,main{
+    grid-area: stack;
+}
+nav{
+    background-color: whitesmoke;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 500ms,
+        visibility 0ms linear 500ms;
+}
+nav:target{
+    visibility: visible;
+    transform: translateX(0);
+    transition:  transform 500ms;
+}
+.content{
+    padding: 5px;
+}
