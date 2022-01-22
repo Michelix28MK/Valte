@@ -3,6 +3,9 @@ body{
     grid: [stack] 1fr/ [stack] 1fr;
     /*background-color: rgb(65, 65, 65);*/
     background-color: white;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 nav,main{
     grid-area: stack;
@@ -26,4 +29,19 @@ nav:target{
     display: grid;
     grid-template-columns: auto 30px;
     align-items: baseline;
+}
+main .titolo{
+    padding: 10px;
+    margin-bottom: -7px;
+    background-image: linear-gradient(
+        to bottom right,
+        #4affde 0%, #5b9dff 40%, #d06bff 60%, #ff34d2 100%
+    );
+    background-size: 200% 200%;
+    animation: movingGradient 5s linear infinite alternate;
+}
+
+@keyframes movingGradient {
+    from { background-position: 0 0; }
+    to   { background-position: 100% 100%; }
 }
