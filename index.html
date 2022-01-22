@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="import" href="component.html">
     <title>Valtea</title>
 </head>
 <body>
@@ -14,14 +15,23 @@
             <a href="#sidebar-open"><img src="icons/menu.svg" alt=""></a>
         </div>
         <hr>
-        <h2>Benvenuti</h2>
-        <p>Questa è la pagina principale del sito</p>
+        <article>
+            <h2>Benvenuti</h2>
+            <p>Questa è la pagina principale del sito</p>
+            <p>working in progress:</p>
+            <label for="completamento">30%</label>
+            <progress id="completamento" value="30" max="100"></progress>
+        </article>
+        <article>
+            <h2>elemento 2</h2>
+            <p>try 2</p>
+        </article>
+        <hr>  
     </main>
-
-    <!--<footer>
-        <h3>Refereces:</h3>
+    <footer>
+        <h5>Contacts</h5>
+        
     </footer>
--->
 
     <nav id="sidebar-open">
         <div class="content">
