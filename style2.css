@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr;
+    grid-template-rows: auto;
+    text-align: center;
+}
+#titolo{
+    padding: 10px;
+    background-image: linear-gradient(
+        to bottom right,
+        #4affde 0%, #5b9dff 40%, #d06bff 60%, #ff34d2 100%
+    );
+    animation: movingGradient 5s linear infinite alternate;
+    box-shadow: inset 0 0 10px #222049;
+}
+@keyframes movingGradient {
+    from { background-position: 0 0; }
+    to   { background-position: 100% 100%; }
+}
+article{
+    margin: 6px;
+    border: solid 1px;
+}
+#menù-utente{
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+}
+/* impostazione menu scomparsa*/
+#aside-right{
+    display: grid;
+    grid: [stack] 1fr/ [stack] 1fr;
+}
+nav,#aside-right{
+    grid-area: stack;
+}
+.titolo{
+    /*display: grid;
+    grid-template-columns: auto 30px;
+    align-items: baseline;*/
+    border: hidden;
+}
+nav{
+    background-color: whitesmoke;
+    visibility: hidden;
+    transform: translateY(+100%);
+    transition: transform 500ms,
+        visibility 0ms linear 500ms;
+}
+li{
+    margin: 6px;
+}
+nav:target{
+    visibility: visible;
+    transform: translateX(0);
+    transition:  transform 500ms;
+}
+/*fine*/
+div,aside, main, h4, h3, h2{
+    border: solid 1px;
+}
